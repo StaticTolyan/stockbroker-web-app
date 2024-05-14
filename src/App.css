@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+  margin-top: 50px;
+  max-width: 100%;
+  width: fit-content;
+  margin: auto;
+}
+
+ul{
+  list-style: square;
+}
+
+form {
+  display: inline-block;
+  text-align: left;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
