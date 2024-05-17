@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <div>
-        <nav className="navbar navbar-expand-md navbar-light bg-light"> {/* Add fixed-top class */}
+        <nav className="navbar navbar-expand-md navbar-light bg-dark" data-bs-theme="dark"> {/* Add fixed-top class */}
           <div className="container">
             <Link className="navbar-brand" to="/">Your App Name</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

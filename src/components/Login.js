@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const Login = ({ setActiveTab }) => {
     const [username, setUsername] = useState('');
@@ -39,36 +40,39 @@ const Login = ({ setActiveTab }) => {
         <div>
             <h2>Login</h2>
             {error && <div className="error">{error}</div>}
-            <form onSubmit={handleSubmit}>
-                <div class="form-group">
-                    <label>Username:</label>
-                    <input className="form-control"
+            <Form onSubmit={handleSubmit}>
+                <FormGroup>
+                    <Label for="username">Username:</Label>
+                    <Input
                         type="text"
+                        id="username"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         required
                     />
-                </div>
-                <div class="form-group">
-                    <label>Password:</label>
-                    <input className="form-control"
+                </FormGroup>
+                <FormGroup>
+                    <Label for="password">Password:</Label>
+                    <Input
                         type="password"
+                        id="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
                     />
-                </div>
-                <div class="form-group">
-                    <label>Seed Phrase:</label>
-                    <input className="form-control"
+                </FormGroup>
+                <FormGroup>
+                    <Label for="seedPhrase">Seed Phrase:</Label>
+                    <Input
                         type="text"
+                        id="seedPhrase"
                         value={seedPhrase}
                         onChange={(e) => setSeedPhrase(e.target.value)}
                         required
                     />
-                </div>
-                <button class="btn btn-primary" type="submit">Login</button>
-            </form>
+                </FormGroup>
+                <Button color="primary" type="submit">Login</Button>
+            </Form>
         </div>
     );
 };

@@ -9,11 +9,3 @@
 ul{
   list-style: square;
 }
-
-form {
-  display: inline-block;
-  text-align: left;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 5px;
-}

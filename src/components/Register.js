@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import Web3 from 'web3'; // Import web3 library
 
 const Register = ({ setActiveTab }) => {
@@ -51,55 +52,60 @@ const Register = ({ setActiveTab }) => {
         <div>
             <h2>Register</h2>
             {error && <div className="error">{error}</div>}
-            <form onSubmit={handleSubmit}>
-                <div class="form-group">
-                    <label>Username:</label>
-                    <input className="form-control"
+            <Form onSubmit={handleSubmit}>
+                <FormGroup>
+                    <Label for="username">Username:</Label>
+                    <Input
                         type="text"
+                        id="username"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         required
                     />
-                </div>
-                <div class="form-group">
-                    <label>Email:</label>
-                    <input className="form-control"
+                </FormGroup>
+                <FormGroup>
+                    <Label for="email">Email:</Label>
+                    <Input
                         type="email"
+                        id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
-                </div>
-                <div class="form-group">
-                    <label>Password:</label>
-                    <input className="form-control"
+                </FormGroup>
+                <FormGroup>
+                    <Label for="password">Password:</Label>
+                    <Input
                         type="password"
+                        id="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
                     />
-                </div>
-                <div class="form-group">
-                    <label>Confirm Password:</label>
-                    <input className="form-control"
+                </FormGroup>
+                <FormGroup>
+                    <Label for="password2">Confirm Password:</Label>
+                    <Input
                         type="password"
+                        id="password2"
                         value={password2}
                         onChange={(e) => setPassword2(e.target.value)}
                         required
                     />
-                </div>
-                <div class="form-group">
-                    <label>Seed Phrase:</label>
-                    <input className="form-control"
+                </FormGroup>
+                <FormGroup>
+                    <Label for="seedPhrase">Seed Phrase:</Label>
+                    <Input
                         type="text"
+                        id="seedPhrase"
                         value={seedPhrase}
                         onChange={(e) => setSeedPhrase(e.target.value)}
                         required
-                    /><br></br>
-                    <button className="btn btn-info" type="button" onClick={generateSeedPhrase}>Generate Seed Phrase</button>
-                </div>
-                <button className="btn btn-primary" type="submit">Register</button>
-            </form>
+                    />
+                    <Button color="info" onClick={generateSeedPhrase}>Generate Seed Phrase</Button>
+                </FormGroup>
+                <Button color="primary" type="submit">Register</Button>
+            </Form>
         </div>
     );
 };

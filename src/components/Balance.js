@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import './Balance.css';
 
@@ -51,7 +52,7 @@ const Balance = () => {
                 {/* Add balance details for other currencies if available */}
             </div>
             <div className="swap-section">
-                <button className="swap-button" onClick={handleSwapPage}>Swap</button> {/* Handle navigation to swap page */}
+                <Button color="primary" onClick={handleSwapPage}>Swap</Button> {/* Handle navigation to swap page */}
             </div>
             <div className="history-section">
                 <h3>Swap History</h3>

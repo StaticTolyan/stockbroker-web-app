@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
 
 const UserInfo = () => {
@@ -61,7 +62,7 @@ const UserInfo = () => {
                     <p>Email: {userInfo.email}</p>
                 </div>
             )}
-            <button className="btn btn-primary" onClick={handleLogout}>Logout</button>
+            <Button color="primary" onClick={handleLogout}>Logout</Button>
         </div>
     );
 };
